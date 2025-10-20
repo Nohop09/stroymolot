@@ -11,7 +11,7 @@ export default function App() {
 
   // Scroll to top when page changes
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0, behavior: "instant" });
   }, [currentPage]);
 
   const handleNavigation = (page: string) => {

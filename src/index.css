@@ -1168,6 +1168,57 @@
     color: var(--color-white);
   }
 
+  .text-red-500 {
+    color: var(--destructive);
+  }
+
+  .text-red-700 {
+    color: var(--destructive);
+  }
+
+  .bg-red-50 {
+    background-color: color-mix(in oklab, var(--destructive) 10%, transparent);
+  }
+
+  .bg-red-500 {
+    background-color: var(--destructive);
+  }
+
+  .bg-green-50 {
+    background-color: color-mix(in oklab, oklch(.6 .15 140) 10%, transparent);
+  }
+
+  .bg-green-500 {
+    background-color: oklch(.6 .15 140);
+  }
+
+  .border-red-200 {
+    border-color: color-mix(in oklab, var(--destructive) 20%, transparent);
+  }
+
+  .border-green-200 {
+    border-color: color-mix(in oklab, oklch(.6 .15 140) 20%, transparent);
+  }
+
+  .text-green-700 {
+    color: oklch(.5 .15 140);
+  }
+
+  .animate-in {
+    animation: slideIn 0.2s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .capitalize {
     text-transform: capitalize;
   }
