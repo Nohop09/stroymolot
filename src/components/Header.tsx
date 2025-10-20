@@ -1,4 +1,4 @@
-import { HardHat, Menu, X } from 'lucide-react';
+import { Hammer, HardHat, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from './ui/button';
 
@@ -21,7 +21,6 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
         <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
             <div className="container mx-auto px-4 py-4">
                 <div className="flex items-center justify-between">
-                    {/* Logo */}
                     <button
                         onClick={() => onNavigate('home')}
                         className="flex items-center gap-2 hover:opacity-80 transition-opacity"
