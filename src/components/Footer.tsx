@@ -49,26 +49,19 @@ export function Footer({ onNavigate }: FooterProps) {
                     <div>
                         <h3 className="text-white mb-4">Связь</h3>
                         <div className="flex gap-4 mb-4">
-                            <a
-                                href="#"
-                                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors"
-                                aria-label="Instagram"
-                            >
-                                <Instagram className="w-5 h-5" />
-                            </a>
-                            <a
-                                href="#"
+                            <button
+                                onClick={() => (window.location.href = 'tel:+79806959553')}
                                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors"
                                 aria-label="Telegram"
                             >
-                                <MessageCircle className="w-5 h-5" />
-                            </a>
+                                <Phone className="w-5 h-5" />
+                            </button>
                             <a
-                                href="#"
+                                href="mailto:ivan.gusev04@mail.ru"
                                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors"
                                 aria-label="WhatsApp"
                             >
-                                <Phone className="w-5 h-5" />
+                                <MessageCircle className="w-5 h-5" />
                             </a>
                         </div>
                         <p className="text-gray-400 text-sm">
