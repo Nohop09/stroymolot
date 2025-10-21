@@ -72,35 +72,35 @@ export function ContactsPage() {
         }
 
         if (form.current) {
-            emailjs.sendForm('service_9h9itz9', 'template_eu5jiss', form.current, '3yLsj6gzclFYVwqrK').then(
-                () => {
-                    handleClick({ vertical: 'top', horizontal: 'center' });
-                    setFormData({ name: '', phone: '', email: '', message: '' });
-                },
-                (error) => (
-                    <Snackbar
-                        message={error.text}
-                        open={open}
-                        autoHideDuration={3000}
-                        onClose={handleClose}
-                        anchorOrigin={{ vertical, horizontal }}
-                        slotProps={{
-                            content: {
-                                sx: {
-                                    backgroundColor: '#ff7a00',
-                                    color: 'white',
-                                    borderRadius: 2,
-                                    boxShadow: '0px 4px 12px rgba(0,0,0,0.15)',
-                                    fontWeight: 500,
-                                    fontSize: '16px',
-                                    px: 3,
-                                    py: 0.5,
-                                },
-                            },
-                        }}
-                    />
-                ),
-            );
+            // emailjs.sendForm('service_9h9itz9', 'template_eu5jiss', form.current, '3yLsj6gzclFYVwqrK').then(
+            //     () => {
+            handleClick({ vertical: 'top', horizontal: 'center' });
+            setFormData({ name: '', phone: '', email: '', message: '' });
+            //             },
+            //             (error) => (
+            //                 <Snackbar
+            //                     message={error.text}
+            //                     open={open}
+            //                     autoHideDuration={3000}
+            //                     onClose={handleClose}
+            //                     anchorOrigin={{ vertical, horizontal }}
+            //                     slotProps={{
+            //                         content: {
+            //                             sx: {
+            //                                 backgroundColor: '#ff7a00',
+            //                                 color: 'white',
+            //                                 borderRadius: 2,
+            //                                 boxShadow: '0px 4px 12px rgba(0,0,0,0.15)',
+            //                                 fontWeight: 500,
+            //                                 fontSize: '16px',
+            //                                 px: 3,
+            //                                 py: 0.5,
+            //                             },
+            //                         },
+            //                     }}
+            //                 />
+            //             ),
+            //         );
         }
     };
 
