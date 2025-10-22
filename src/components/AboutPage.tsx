@@ -30,7 +30,7 @@ export function AboutPage() {
             name: 'Владимир Анатольевич Елистратов',
             position: 'Генеральный Директор',
             experience: '15 лет опыта',
-            image: '/public/vladimir.jpeg',
+            image: '/vladimir.jpeg',
         },
     ];
 
@@ -40,7 +40,7 @@ export function AboutPage() {
             <section className="relative h-[400px] flex items-center justify-center text-white overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/70 z-10" />
                 <ImageWithFallback
-                    src="/public/about_us.jpg"
+                    src="/about_us.jpg"
                     alt="Команда Строй-Молот"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -73,7 +73,7 @@ export function AboutPage() {
                             </div>
                             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                                 <ImageWithFallback
-                                    src="/public/our_history.jpg"
+                                    src="/our_history.jpg"
                                     alt="Строительство"
                                     className="w-full h-full object-cover"
                                 />
