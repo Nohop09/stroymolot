@@ -22,19 +22,19 @@ export function HomePage({ onNavigate }: HomePageProps) {
             id: 1,
             title: 'Производственное предприятие ДСК',
             description: 'Демонтаж здания',
-            image: '../../public/portfolio_dsk.jpg',
+            image: '/public/portfolio_dsk.jpg',
         },
         {
             id: 2,
             title: 'Жилой дом на ул. Ермака',
             description: 'Монтаж кровли в жилом доме',
-            image: '../../public/portfolio_ermaka.jpg',
+            image: '/public/portfolio_ermaka.jpg',
         },
         {
             id: 3,
             title: 'Коттедж на ул. Крюкова',
             description: 'Монтаж крыши дома типа коттедж',
-            image: '../../public/portfolio_cottage.jpg',
+            image: '/public/portfolio_cottage.jpg',
         },
     ];
 
@@ -74,7 +74,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <section className="relative h-[600px] flex items-center justify-center text-white overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/70 z-10" />
                 <ImageWithFallback
-                    src="../../public/house_roof.jpg"
+                    src="/public/house_roof.jpg"
                     alt="Строительная площадка"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
