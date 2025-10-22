@@ -72,35 +72,35 @@ export function ContactsPage() {
         }
 
         if (form.current) {
-            // emailjs.sendForm('service_9h9itz9', 'template_eu5jiss', form.current, '3yLsj6gzclFYVwqrK').then(
-            //     () => {
-            handleClick({ vertical: 'top', horizontal: 'center' });
-            setFormData({ name: '', phone: '', email: '', message: '' });
-            //             },
-            //             (error) => (
-            //                 <Snackbar
-            //                     message={error.text}
-            //                     open={open}
-            //                     autoHideDuration={3000}
-            //                     onClose={handleClose}
-            //                     anchorOrigin={{ vertical, horizontal }}
-            //                     slotProps={{
-            //                         content: {
-            //                             sx: {
-            //                                 backgroundColor: '#ff7a00',
-            //                                 color: 'white',
-            //                                 borderRadius: 2,
-            //                                 boxShadow: '0px 4px 12px rgba(0,0,0,0.15)',
-            //                                 fontWeight: 500,
-            //                                 fontSize: '16px',
-            //                                 px: 3,
-            //                                 py: 0.5,
-            //                             },
-            //                         },
-            //                     }}
-            //                 />
-            //             ),
-            //         );
+            emailjs.sendForm('service_9h9itz9', 'template_eu5jiss', form.current, '3yLsj6gzclFYVwqrK').then(
+                () => {
+                    handleClick({ vertical: 'top', horizontal: 'center' });
+                    setFormData({ name: '', phone: '', email: '', message: '' });
+                },
+                (error) => (
+                    <Snackbar
+                        message={error.text}
+                        open={open}
+                        autoHideDuration={3000}
+                        onClose={handleClose}
+                        anchorOrigin={{ vertical, horizontal }}
+                        slotProps={{
+                            content: {
+                                sx: {
+                                    backgroundColor: '#ff7a00',
+                                    color: 'white',
+                                    borderRadius: 2,
+                                    boxShadow: '0px 4px 12px rgba(0,0,0,0.15)',
+                                    fontWeight: 500,
+                                    fontSize: '16px',
+                                    px: 3,
+                                    py: 0.5,
+                                },
+                            },
+                        }}
+                    />
+                ),
+            );
         }
     };
 
@@ -213,6 +213,7 @@ export function ContactsPage() {
                                 <div>
                                     <label className="block text-sm mb-2 text-gray-700">Ваше имя *</label>
                                     <Input
+                                        name="from_name"
                                         placeholder="Иван Иванов"
                                         value={formData.name}
                                         onChange={(e) => {
@@ -231,6 +232,7 @@ export function ContactsPage() {
                                 <div>
                                     <label className="block text-sm mb-2 text-gray-700">Телефон *</label>
                                     <Input
+                                        name="from_phone"
                                         type="tel"
                                         placeholder="+7 (999) 123-45-67"
                                         value={formData.phone}
@@ -250,6 +252,7 @@ export function ContactsPage() {
                                 <div>
                                     <label className="block text-sm mb-2 text-gray-700">Email *</label>
                                     <Input
+                                        name="from_email"
                                         type="email"
                                         placeholder="example@mail.ru"
                                         value={formData.email}
@@ -269,6 +272,7 @@ export function ContactsPage() {
                                 <div>
                                     <label className="block text-sm mb-2 text-gray-700">Сообщение *</label>
                                     <Textarea
+                                        name="message"
                                         placeholder="Расскажите о вашем проекте..."
                                         value={formData.message}
                                         onChange={(e) => {
@@ -311,7 +315,7 @@ export function ContactsPage() {
                             рабочее время
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="tel:+79605126163">
+                            <a href="tel:+79806959553">
                                 <Button
                                     size="lg"
                                     className="bg-orange-500 hover:bg-orange-600 text-white w-full sm:w-auto"

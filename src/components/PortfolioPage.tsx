@@ -3,7 +3,11 @@ import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-export function PortfolioPage() {
+interface PortfolioPageProps {
+    onNavigate: (page: string) => void;
+}
+
+export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
     const [activeFilter, setActiveFilter] = useState('all');
 
     const filters = [
@@ -16,55 +20,56 @@ export function PortfolioPage() {
     const projects = [
         {
             id: 1,
-            title: 'ЖК «Современный Квартал»',
+            title: 'Жилой дом на ул. Ермака',
             category: 'construction',
-            description: 'Строительство жилого комплекса премиум-класса на 250 квартир',
-            image: '../../public/modern-square.jpeg',
+            description: 'Монтаж кровли в жилом доме',
+            image: '../../public/portfolio_ermaka.jpg',
             year: '2024',
-            location: 'Москва',
+            location: 'Иваново',
         },
         {
             id: 2,
-            title: 'Офисный центр «Северная Башня»',
-            category: 'construction',
-            description: 'Монтаж металлоконструкций и остекление фасада',
-            image: '../../public/repair-office.jpeg',
+            title: 'Производственное предприятие ДСК',
+            category: 'finishing',
+            description: 'Демонтаж здания',
+            image: '../../public/portfolio_dsk.jpg',
             year: '2023',
-            location: 'Санкт-Петербург',
+            location: 'Иваново',
         },
+
         {
             id: 3,
-            title: 'Реконструкция интерьера офиса',
-            category: 'renovation',
-            description: 'Полная реконструкция офисного пространства 1500 м²',
-            image: '../../public/steel-line.jpeg',
+            title: 'Коттедж на ул. Крюкова',
+            category: 'construction',
+            description: 'Монтаж крыши дома типа коттедж',
+            image: '../../public/portfolio_cottage.jpg',
             year: '2024',
-            location: 'Москва',
+            location: 'Иваново',
         },
         {
             id: 4,
-            title: 'Загородный дом в Подмосковье',
-            category: 'construction',
-            description: 'Строительство двухэтажного дома из газобетона',
-            image: '../../public/modern-square.jpeg',
+            title: 'Коттедж в деревне Крюково',
+            category: 'renovation',
+            description: 'Залитие межэтажного перекрытия в частном доме',
+            image: '../../public/portfolio_kryukova.jpg',
             year: '2023',
-            location: 'Московская область',
+            location: 'Ивановская обл.',
         },
         {
             id: 5,
-            title: 'Промышленный комплекс',
-            category: 'construction',
-            description: 'Строительство производственного здания с административным блоком',
-            image: '../../public/repair-office.jpeg',
+            title: 'Завод...',
+            category: 'finishing',
+            description: 'Демонтаж здания типа "завод"',
+            image: '../../public/portfolio_factory.jpg',
             year: '2022',
             location: 'Калуга',
         },
         {
             id: 6,
-            title: 'Ремонт торгового центра',
-            category: 'renovation',
-            description: 'Капитальный ремонт с заменой инженерных систем',
-            image: '../../public/steel-line.jpeg',
+            title: 'Ивановский государственный энергетический университет',
+            category: 'finishing',
+            description: 'Демонтаж энерго университета',
+            image: '../../public/portfolio_university.jpg',
             year: '2023',
             location: 'Москва',
         },
@@ -152,7 +157,13 @@ export function PortfolioPage() {
                     <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                         Свяжитесь с нами, и мы подготовим индивидуальное предложение
                     </p>
-                    <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                    <Button
+                        size="lg"
+                        className="bg-orange-500 hover:bg-orange-600 text-white"
+                        onClick={() => {
+                            onNavigate('contacts');
+                        }}
+                    >
                         Связаться с нами
                     </Button>
                 </div>

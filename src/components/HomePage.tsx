@@ -20,21 +20,21 @@ export function HomePage({ onNavigate }: HomePageProps) {
     const projects = [
         {
             id: 1,
-            title: 'ЖК «Современный Квартал»',
-            description: 'Строительство жилого комплекса премиум-класса',
-            image: '../../public/modern-square.jpeg',
+            title: 'Производственное предприятие ДСК',
+            description: 'Демонтаж здания',
+            image: '../../public/portfolio_dsk.jpg',
         },
         {
             id: 2,
-            title: 'Ремонт офисного здания',
-            description: 'Комплексная реконструкция интерьера',
-            image: '../../public/repair-office.jpeg',
+            title: 'Жилой дом на ул. Ермака',
+            description: 'Монтаж кровли в жилом доме',
+            image: '../../public/portfolio_ermaka.jpg',
         },
         {
             id: 3,
-            title: 'Бизнес-центр «Стальная Линия»',
-            description: 'Монтаж металлоконструкций и фасадные работы',
-            image: '../../public/steel-line.jpeg',
+            title: 'Коттедж на ул. Крюкова',
+            description: 'Монтаж крыши дома типа коттедж',
+            image: '../../public/portfolio_cottage.jpg',
         },
     ];
 

@@ -15,7 +15,7 @@ export function Footer({ onNavigate }: FooterProps) {
     return (
         <footer className="bg-gray-900 text-gray-300 py-12">
             <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <div className="flex justify-between items-start gap-16 mb-8">
                     {/* Company Info */}
                     <div>
                         <div className="flex items-center gap-2 mb-4">
@@ -24,9 +24,7 @@ export function Footer({ onNavigate }: FooterProps) {
                             </div>
                             <span className="text-white">Строй-Молот</span>
                         </div>
-                        <p className="text-gray-400 text-sm">
-                            Надёжное строительство под ключ. Качество, опыт и профессионализм с 2013 года.
-                        </p>
+                        <p className="text-gray-400 text-sm">Качество, опыт и профессионализм с 2013 года.</p>
                     </div>
 
                     {/* Navigation */}
