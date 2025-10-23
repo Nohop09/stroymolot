@@ -27,7 +27,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
   const projects = [
     {
       id: 1,
-      title: "Производственное предприятие ДСК",
+      title: "Предприятие ДСК",
       description: "Демонтаж здания",
       image: "/portfolio_dsk.jpg",
     },
