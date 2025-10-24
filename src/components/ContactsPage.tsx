@@ -356,7 +356,7 @@ export function ContactsPage() {
               вами в течение 15 минут в рабочее время
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+79806959553">
+              <a href="tel:+79605126163">
                 <Button
                   size="lg"
                   className="bg-orange-500 hover:bg-orange-600 text-white w-full sm:w-auto"
