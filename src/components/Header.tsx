@@ -25,8 +25,8 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
             onClick={() => onNavigate("home")}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-gray-800 to-gray-700 rounded flex items-center justify-center border-2 border-orange-500">
-              <img src="/logo.png" />
+            <div className="w-10 h-10 bg-gradient-to-br from-gray-800 to-gray-700 rounded flex items-center justify-center ">
+              <img src="/stroymolot-new-small.jpg" />
             </div>
             <span className="text-gray-900">Строй-Молот</span>
           </button>
